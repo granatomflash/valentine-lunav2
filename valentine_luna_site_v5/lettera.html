@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ff2e63" />
+  <title>Lettera per Luna 💌</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="floating-elements" aria-hidden="true"></div>
+
+  <!-- Sorpresa: busta sopra la lettera (niente “scrittura lenta”) -->
+  <div class="envelope-overlay" id="envelopeOverlay" role="dialog" aria-modal="true">
+    <div class="envelope-card">
+      <div class="envelope-emoji">💌</div>
+      <h2>Una lettera per Luna</h2>
+      <p>Aprila quando vuoi… è tutta per te 💘</p>
+      <button class="cute-btn final-yes" id="openEnvelopeBtn">Apri la lettera 💝</button>
+    </div>
+  </div>
+
+  <main class="container" role="main">
+    <h1 id="letterTitle">Per Luna 💌</h1>
+    <p class="subtitle">Una sorpresa di San Valentino… solo per te 😌</p>
+
+    <div class="letter-card">
+      <div class="letter-paper">
+        <p class="letter-to" id="letterTo"></p>
+        <div class="letter-body" id="letterBody"></div>
+        <p class="letter-sign" id="letterSign"></p>
+      </div>
+    </div>
+
+    <div class="cta-row" style="margin-top: 16px;">
+      <a class="cute-btn ghost" href="index.html">⬅️ Torna indietro</a>
+      <button class="cute-btn" id="retypeBtn">Rivedi la sorpresa ✨</button>
+    </div>
+  </main>
+
+  <!-- Music Player (stesso sistema della home) -->
+  <div id="musicControls" class="music-controls">
+    <button id="musicToggle" class="music-btn">🎵 Avvia musica</button>
+    <audio id="bgMusic" loop>
+      <source id="musicSource" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="theme.js"></script>
+  <script src="lettera.js"></script>
+</body>
+</html>
